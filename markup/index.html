@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TableDZ</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
+    <link rel="manifest" href="./images/icons/site.webmanifest">
+    <link rel="mask-icon" href="./images/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>TestDriver</title>
 </head>
 <body>
     <header>
@@ -18,38 +25,92 @@
             <h1>Пошук авто</h1>
         </section>
         <div class="search">
-            <form method="get" action="https://fom.in.ua/echo">
+            <form action="https://fom.in.ua/echo" method="post">
                 <fieldset>
                     <legend>Автопідбор</legend>
                     <p>
                         <label for="type-auto">Тип авто</label>
-                        <select id="type-auto">
-                            <option value="">легкові</option>
-                            <option value="">вантажні</option>
-                            <option value="">мото</option>
-                            <option value="">причепи</option>
-                            <option value="">інше</option>
+                        <select id="type-auto" name="type-auto">
+                            <option value="light">легкові</option>
+                            <option value="вантажні">вантажні</option>
+                            <option value="мото">мото</option>
+                            <option value="причепи">причепи</option>
+                            <option value="інше">інше</option>
+                        </select>
+                        <label for="gas">Тип палива</label>
+                        <select id="gas" name="gas">
+                            <option value="gasoline">gasoline</option>
+                            <option value="diese">diese</option>
+                            <option value="electro">electro</option>
+                            <option value="hybride">hybride</option>
+                            <option value="інше">інше</option>
                         </select>
                     </p>
                     <p>
                         <label for="mark-auto">Марка авто</label>
-                        <select id="mark-auto">
-                            <option value="">Audi</option>
-                            <option value="">Bmw</option>
-                            <option value="">Buick</option>
-                            <option value="">Chery</option>
-                            <option value="">інше</option>
+                        <select id="mark-auto" name="mark-auto">
+                            <option value="Audi">Audi</option>
+                            <option value="Bmw">Bmw</option>
+                            <option value="Buick">Buick</option>
+                            <option value="Chery">Chery</option>
+                            <option value="інше">інше</option>
+                        </select>
+                        <label for="country-auto">Країна виробник</label>
+                        <select id="country-auto" name="country-auto">
+                            <option value="Німечина">Німечина</option>
+                            <option value="Україна">Україна</option>
+                            <option value="Китай">Китай</option>
+                            <option value="Японія">Японія</option>
+                            <option value="інше">інше</option>
                         </select>
                     </p>
                     <p>
-                        <label for="country-auto">Країна виробник</label>
-                        <select id="country-auto" m>
-                            <option value="">Германія</option>
-                            <option value="">Україна</option>
-                            <option value="">Китай</option>
-                            <option value="">Японія</option>
-                            <option value="">інше</option>
+                        <span>Стан:</span>
+                        <label><input type="checkbox" name="state" checked>без пошкоджень</label> 
+                        <label><input type="checkbox" name="state">після дтп</label> 
+                        <label><input type="checkbox" name="state">нерозмитнена</label> 
+                        <label><input type="checkbox" name="state">у кредиті</label> 
+                        <label><input type="checkbox" name="state">один хазяїн</label> 
+                        <label><input type="checkbox" name="state">без пробігу</label> 
+                    </p>
+                    <p>
+                        <span>Тип коробки передач:</span> 
+                        <label><input type="radio" name="type-kp">Автомат</label>
+                        <label><input type="radio" name="type-kp">Механіка</label>
+                        <label><input type="radio" name="type-kp">Варіатор</label>
+                        <label><input type="radio" name="type-kp">Інше</label>
+                    </p>
+                    <p>
+                        <span>Колір:</span> 
+                        <label><input type="radio" name="col-auto">Чорна</label>
+                        <label><input type="radio" name="col-auto">Біла</label>
+                        <label><input type="radio" name="col-auto">Червона</label>
+                        <label><input type="radio" name="col-auto">Інше</label>
+                    </p>
+                    <p>
+                        <label for="comfort">Комфорт</label>
+                        <select name="comfort" id="comfort">
+                            <option value="Люк">Люк</option>
+                            <option value="Шкіряний салон">Шкіряний салон</option>
+                            <option value="Панорама">Панорама</option>
+                            <option value="Масаж">Масаж</option>
+                            <option value="Інше">Інше</option>
                         </select>
+                    </p>
+                    <p>
+                        <label for="price">Ціна(грн.)</label>
+                        <input id="price" type="text" name="price" placeholder="ВІД">
+                        <input type="text" name="price" placeholder="ДО">
+                    </p>
+                    <p>
+                        <label for="age">Бажаний рік</label>
+                        <input id="age" type="number" name="age" min="2000" max="2023" step="1">
+                    </p>
+                    
+                    <p>
+                    <input type="reset">
+                        <!-- <button type="button">Відправити</button> -->
+                        <input type="submit" value="Відправити">
                     </p>
                 </fieldset>
             </form>
