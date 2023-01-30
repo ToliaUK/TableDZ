@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="..//images/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="..//images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="..//images/icons/favicon-16x16.png">
+    <link rel="manifest" href="..//images/icons/site.webmanifest">
+    <link rel="mask-icon" href="..//images/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Registrerion</title>
+</head>
+<body>
+    <header>
+        <h1>Продаж авто по Україні</h1>
+    </header>
+    <main>
+        <form action="https://fom.in.ua/echo" method="post">
+            <fieldset>
+                <legend>Автопродаж</legend>
+                <table class="registr">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Форма реєстрації</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label for="invite-number">Номер запрошення</label></td>
+                            <td><input id="invite-number" name="invite-number" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="name">Ім'я</label></td>
+                            <td><input id="name" name="name" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="surname">Фамалія</label></td>
+                            <td><input id="surname" name="surname" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">Місто</label></td>
+                            <td><select id="city" name="city">
+                                <option value="Одеса">Одеса</option>
+                                <option value="Київ">Київ</option>
+                                <option value="Харків">Харків</option>
+                                <option value="Миколаїв">Миколаїв</option>
+                                <option value="інше">інше</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Єл.пошта</label></td>
+                            <td><input id="email" name="email" type="email" placeholder="...@mail.com" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pass">Пароль</label></td>
+                            <td><input id="pass" name="password" type="password" placeholder="ваш пароль" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pass1">Пароль</label></td>
+                            <td><input id="pass1" name="password" type="password" placeholder="ваш пароль" required></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><input type="reset" value="Скинути"></td>
+                            <td><input type="submit" value="Відправити"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <!-- майбутння прив'язка до головної сторінки -->
+    </footer>
+</body>
+</html>
